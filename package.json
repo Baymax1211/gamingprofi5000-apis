@@ -1,0 +1,25 @@
+{
+  "name": "gamingprofi5000-apis",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baymax1211/gamingprofi5000-apis.git"
+  },
+  "author": "Navin (https://navin.baymaxapi.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baymax1211/gamingprofi5000-apis/issues"
+  },
+  "homepage": "https://github.com/Baymax1211/gamingprofi5000-apis#readme",
+  "description": "",
+  "dependencies": {
+    "colorette": "^2.0.20",
+    "cors": "^2.8.5",
+    "discord.js": "^14.18.0",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
+}
