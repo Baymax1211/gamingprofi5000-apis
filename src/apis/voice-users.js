@@ -8,7 +8,9 @@ module.exports = {
 
     async execute(req, res) {
         let token = req.headers.authorization;
-        const { channelId } = req.query;
+        const {
+            channelId
+        } = req.query;
 
         if (!token || !channelId) {
             return res.status(400).json({
@@ -67,7 +69,16 @@ module.exports = {
                 username: member.user.username
             }));
 
-            return res.json({ members: membersInVC });
+            if (membersInVC.length === 0) {
+                return res.json({
+                    error: "No users found."
+                });
+
+            }
+
+            return res.json({
+                members: membersInVC
+            });
         } catch (error) {
             if (error.code === 50035 || error.code === 40006) {
                 return res.status(429).json({
